@@ -1,5 +1,5 @@
-i = 40
+i = 50
 until i == 10
-  puts i
-  i = i - 4
+  p i
+  i = i - 5
 end
