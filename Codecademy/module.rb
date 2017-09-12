@@ -12,6 +12,11 @@ module Circle
 end
 
 
+p circle1 = Circle.area(2)
+p circle2 =  Circle.circumference(4)
+
+
+
 
 module Action
   def jump
