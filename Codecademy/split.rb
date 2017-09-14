@@ -1,14 +1,9 @@
-puts "Text to search through: "
+puts "Text please: "
 text = gets.chomp
-puts "Word to redact: "
-redact = gets.chomp
 
 words = text.split(" ")
-
-words.each do |word|
-  if word != redact
-    print word + " "
-  else
-    print "REDACTED "
-  end
-end
+frequencies = Hash.new(0)
+words.each { |word| frequencies[word] += 1 }
+frequencies = frequencies.sort_by {|a, b| b }
+frequencies.reverse!
+frequencies.each { |word, frequency| puts word + " " + frequency.to_s }
