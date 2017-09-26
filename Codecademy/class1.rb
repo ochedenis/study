@@ -16,3 +16,17 @@ javascript = Language.new("JavaScript", "Brendan Eich")
 p ruby.description
 p python.description
 p javascript.description
+
+
+
+
+# class Person
+#   def vs9life(name, job)
+#     @name = name
+#     @job = job
+#   end
+# end
+#
+# person = Person.new("vasia", "cleaning")
+# assert_equal person.name, "vasia"
+# assert_equal person.job, "cleaning"

@@ -1,33 +1,14 @@
 
-class Language
-  @@type = "programming"
-  def initialize(name, creator)
-    @name = name
-    @creator = creator
-  end
-
-  def description
-    "I'm #{@name} and I was created by #{@creator}! #{@@type}"
+class Car
+  attr_accessor :color, :doors
+  def initialize
+    yield(self)
   end
 end
 
-ruby = Language.new("Ruby", "Yukihiro Matsumoto")
-python = Language.new("Python", "Guido van Rossum")
-javascript = Language.new("JavaScript", "Brendan Eich")
-p ruby.description
-p python.description
-p javascript.description
+car = Car.new do |c|
+  c.color = "Red"
+  c.doors = 4
+ end
 
-
-
-
-# class Person
-#   def vs9life(name, job)
-#     @name = name
-#     @job = job
-#   end
-# end
-#
-# person = Person.new("vasia", "cleaning")
-# assert_equal person.name, "vasia"
-# assert_equal person.job, "cleaning"
+ puts "My car's color is #{car.color} and it's got #{car.doors} doors."

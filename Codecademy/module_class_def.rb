@@ -81,6 +81,7 @@ shirt = Shirt.create(name: "MTF", size: "L")
 shirt.stock_count = 10
 
 shirt = Shirt.create(name: "MTF2", size: "L")
+shirt.stock_count = 0
 
 shirt = Shirt.create(name: "MTF", size: "M")
 shirt.stock_count = 9
